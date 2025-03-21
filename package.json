@@ -8,7 +8,7 @@
     "mcp": "./build/index.js"
   },
   "scripts": {
-    "build": "tsc && node --eval \"import('fs').then(fs => fs.promises.chmod('build/index.js', 0o755).catch(() => {}))\""
+    "build": "tsc && chmod 755 build/index.js"
   },
   "files": [
     "build"
