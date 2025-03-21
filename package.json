@@ -1,0 +1,29 @@
+{
+  "name": "mcp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "mcp": "./build/index.js"
+  },
+  "scripts": {
+    "build": "tsc && node --eval \"import('fs').then(fs => fs.promises.chmod('build/index.js', 0o755).catch(() => {}))\""
+  },
+  "files": [
+    "build"
+  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.7.0",
+    "better-sqlite3": "^11.9.1",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.12",
+    "@types/node": "^22.13.10",
+    "typescript": "^5.8.2"
+  }
+}
